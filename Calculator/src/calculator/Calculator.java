@@ -14,22 +14,22 @@ public class Calculator {
     /**
      * @param args the command line arguments
      */
-    int x,y;
-    Calculator(int a,int b){
+    byte x,y;
+    Calculator(byte a,byte b){
         x=a;
         y=b;
     }
-    float add(){
-        return (float)(x+y);
+    byte add(){
+        return (byte) (x+y);
     }
-    float sub(){
-        return (float)(x-y);
+    byte sub(){
+        return (byte) (x-y);
     }
     float divide(){
-        return (float)(x/y);
+        return (x/y);
     }
-    float multiply(){
-        return (float)(x*y);
+    byte multiply(){
+        return (byte) (x*y);
     }
     float power(){
         float value=1;
@@ -41,22 +41,23 @@ public class Calculator {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Enter two no.\n");
-        int X,Y,temp;
+        byte X,Y;
+        byte temp;
         Scanner scan=new Scanner(System.in);
-        X=scan.nextInt();
-        Y=scan.nextInt();
+        X=scan.nextByte();
+        Y=scan.nextByte();
         Calculator A=new Calculator(X,Y);
-        float result=0;
+        float  result=0;
         do{
             System.out.println("1-Add\n2-Subtract\n3-Multiply\n4-Divide\n5-Power\n0-Exit\n");
-            temp=scan.nextInt();
+            temp=scan.nextByte();
             switch(temp){
-                case (int)(1): result=A.add();
-                case (int)(2): result=A.sub();
-                case (int)(3): result=A.multiply();
-                case (int)(4): result=A.divide();
-                case (int)(5): result=A.power();
-                default: System.out.println("Wrong choice\n");
+                case 1: result=A.add(); break;
+                case 2: result=A.sub(); break;
+                case 3: result=A.multiply(); break;
+                case 4: result=A.divide(); break;
+                case 5: result=A.power(); break;
+                default: System.out.println("Wrong choice\n"); break;
             }
             System.out.println("The result is=" + result);
             
