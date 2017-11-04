@@ -19,9 +19,13 @@ public class LearningJAVA {
         // TODO code application logic here
         int temp;
         Scanner scan=new Scanner(System.in);
-        System.out.println("Enter the upper limit\n");
-        temp=scan.nextInt();
-        armstrong.print(temp);
+        //System.out.println("Enter the upper limit\n");
+        //temp=scan.nextInt();
+        //armstrong.print(temp);
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+        arrays obj=new arrays(3);
+        obj.getarray();
     }
     
 }
